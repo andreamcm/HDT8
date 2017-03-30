@@ -3,7 +3,7 @@ Daniel Rodriguez, 15796
 Fecha: 5 de abril de 2017
 Paciente.java*/
 
-public class Paciente extends Comparable<E>{
+public class Paciente implements Comparable{
   private String nombre;
   private String sintomas;
   private String prioridad;
@@ -37,5 +37,10 @@ public class Paciente extends Comparable<E>{
   public String getPrioridad(){
     return prioridad;
   }
+
+    @Override
+    public int compareTo(Object o) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 }
