@@ -116,24 +116,24 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
 		return minVal;
 	}
 
-    @Override
+
     public E getFirst() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+			return data.get(0);
     }
 
-    @Override
     public boolean isEmpty() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+			return data.size() == 0;
     }
 
-    @Override
     public int size() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+			return data.size();
+		}
 
-    @Override
     public void clear() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+			data.clear();
     }
 
+		public String toString(){
+			return "VectorHeap: " + data;
+		}
 }
