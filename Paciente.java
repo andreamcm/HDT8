@@ -2,16 +2,21 @@
 Daniel Rodriguez, 15796
 Fecha: 5 de abril de 2017
 Paciente.java*/
+import java.lang.Object;
 
-public class Paciente implements Comparable{
+public class Paciente implements Comparable<Paciente>{
   private String nombre;
   private String sintomas;
   private String prioridad;
 
+  public Paciente(String nombre, String sintomas, String prioridad){
+    this.nombre = nombre;
+    this.sintomas = sintomas;
+    this.prioridad = prioridad;
+  }
+
   public Paciente(){
-    nombre = " ";
-    sintomas = " ";
-    prioridad = " ";
+    super();
   }
 
   public void setNombre(String nombre){
@@ -38,9 +43,12 @@ public class Paciente implements Comparable{
     return prioridad;
   }
 
-    @Override
-    public int compareTo(Object o) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+  public String toString(){
+    return nombre + ", " + sintomas + ", " + prioridad;
+  }
+
+  public int compareTo(Paciente paciente){
+    return this.prioridad.compareTo(paciente.prioridad);
+  }
 
 }
